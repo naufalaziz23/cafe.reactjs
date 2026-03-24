@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-yellow: #FBBF24;
+  --color-brand-yellow-light: #FDE68A;
+  --color-brand-yellow-dark: #D97706;
+  --color-brand-coffee: #4A3022;
+  --color-brand-coffee-light: #8B5E3C;
+  --color-brand-white: #FFFFFF;
+  --color-brand-black: #1A120B;
+  --color-brand-gray: #FAFAFA;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+body {
+  background-color: var(--color-brand-gray);
+  color: var(--color-brand-black);
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg shadow-black/5;
+}
